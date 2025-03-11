@@ -2,9 +2,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-body {
-  min-height: 100vh;
-  width: 100%;
+:root{
+  --primary-color: #22577a;
+  --secondary-color: #38a3a5;
+  --tertiary-color: #57cc99;
+  --quaternary-color: #80ed99;
+  --quinary-color: #c7f9cc;
+  --white-color: #f0f0f0;
+  --black-color: #333;
 }
+
+html{
+  font-size: 62.5%;
+  font-family: Mona Sans;
+}
+
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--quinary-color);
+  color: var(--tertiary-color);
+}
+
+

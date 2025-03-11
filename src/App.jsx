@@ -4,24 +4,31 @@ import { HomePage } from "./pages/Home";
 import { AboutPage } from "./pages/About";
 import { MoviesPage } from "./pages/Movies";
 import { ContactPage } from "./pages/Contact";
+import { AppLayout } from "./components/Layouts/AppLayout";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <HomePage />,
-    },
-    {
-      path: "/about",
-      element: <AboutPage />,
-    },
-    {
-      path: "/movies",
-      element: <MoviesPage />,
-    },
-    {
-      path: "/contact",
-      element: <ContactPage />,
+      element: <AppLayout />,
+      children: [
+        {
+          path: "/",
+          element: <HomePage />,
+        },
+        {
+          path: "/about",
+          element: <AboutPage />,
+        },
+        {
+          path: "/movies",
+          element: <MoviesPage />,
+        },
+        {
+          path: "/contact",
+          element: <ContactPage />,
+        }, 
+      ],
     },
   ]);
 
